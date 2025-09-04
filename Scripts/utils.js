@@ -20,9 +20,7 @@ function normalizeOptions(args) {
             && lastResult.length > 1
             && !lastResult.includes("=")
         ) {
-            result[lastIdx] = (lastResult.startsWith("--"))
-                ? lastResult + "=" + opt
-                : lastResult + " " + opt;
+            result[lastIdx] = lastResult + " " + opt;
         }
         else result.push(opt);
     }
