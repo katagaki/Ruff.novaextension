@@ -8,9 +8,9 @@ class Formatter {
     getProcessOptions(filename = null) {
         const defaultOptions = (filename)
             ? (filename !== ".")
-                ? ["--quiet", "--stdin-filename", filename]
+                ? ["--quiet", "--stdin-filename", filename, "-"]
                 : ["--quiet", filename]
-            : ["--quiet"];
+            : ["--quiet", "-"];
 
         const commandArguments = this.config.commandFormatArguments();
         const extraOptions = utils.normalizeOptions(commandArguments);
