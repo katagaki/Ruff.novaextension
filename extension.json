@@ -130,7 +130,13 @@
         },
         {
             "key": "com.katagaki.RuffForNova.formatOnSave",
-            "title": "Format on a file save",
+            "title": "Format on file save",
+            "type": "boolean",
+            "default": true
+        },
+        {
+            "key": "com.katagaki.RuffForNova.organizeOnSave",
+            "title": "Organize imports on file save",
             "type": "boolean",
             "default": true
         }
@@ -178,7 +184,27 @@
         },
         {
             "key": "com.katagaki.RuffForNova.formatOnSave",
-            "title": "Format on a file save",
+            "title": "Format on file save",
+            "type": "enum",
+            "values": [
+                [
+                    -1,
+                    "Global"
+                ],
+                [
+                    1,
+                    "Yes"
+                ],
+                [
+                    0,
+                    "No"
+                ]
+            ],
+            "default": -1
+        },
+        {
+            "key": "com.katagaki.RuffForNova.organizeOnSave",
+            "title": "Organize imports on file save",
             "type": "enum",
             "values": [
                 [

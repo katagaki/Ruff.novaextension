@@ -11,6 +11,7 @@ exports.activate = function () {
     console.info(`Check mode: ${Config.checkMode()}`);
     console.info(`Command (format) arguments: ${Config.commandFormatArguments()}`);
     console.info(`Format on save: ${Config.formatOnSave()}`);
+    console.info(`Organize on save: ${Config.organizeOnSave()}`);
 
     var assistant = null;
 
@@ -36,8 +37,15 @@ exports.activate = function () {
     });
 
     nova.workspace.onDidAddTextEditor((editor) => {
-        if (editor.document.syntax !== "python" || !Config.formatOnSave()) return;
-        editor.onWillSave(formatter.provideFormat, formatter);
+        if (editor.document.syntax !== "python") { 
+            return;
+        } 
+        if (Config.formatOnSave()) {
+            editor.onWillSave(formatter.formatOnSave, formatter);
+        }
+        if (Config.organizeOnSave()) {
+            editor.onWillSave(issueProvider.organizeOnSave, issueProvider);
+        }
     });
 
     nova.commands.register("formatWithRuff", formatter.format, formatter);
@@ -48,6 +56,6 @@ exports.activate = function () {
         issueProvider.fix(editor, "ALL", null);
     });
     nova.commands.register("organizeWithRuff", (editor) => {
-        issueProvider.fix(editor, null, "I001");
+        issueProvider.fix(editor, null, "I");
     });
 }

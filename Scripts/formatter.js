@@ -38,7 +38,7 @@ class Formatter {
         );
     }
 
-    provideFormat(editor) {
+    formatOnSave(editor) {
         return new Promise((resolve, reject) => this.format(editor, resolve, reject));
     }
 

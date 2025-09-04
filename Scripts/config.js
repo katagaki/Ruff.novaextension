@@ -19,6 +19,7 @@ const Config = {
     checkMode: () => get_config_value("checkMode"),
     commandFormatArguments: () => get_config_value("commandFormatArguments"),
     formatOnSave: () => get_config_value("formatOnSave"),
+    organizeOnSave: () => get_config_value("organizeOnSave"),
 }
 
 module.exports = Config;

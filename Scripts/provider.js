@@ -45,6 +45,10 @@ class IssueProvider {
         return new Promise((resolve, reject) => this.check(editor, resolve, reject));
     }
 
+    organizeOnSave(editor) {
+        return new Promise((resolve, reject) => this.fix(editor, null, "I", resolve, reject));
+    }
+
     check(editor, resolve = null, reject = null) {
         if (editor.document.isEmpty) {
             if (reject) reject("empty file");
@@ -101,7 +105,7 @@ class IssueProvider {
         });
     }
 
-    fix(editor, fixable = null, select = null) {
+    fix(editor, fixable = null, select = null, resolve = null, reject = null) {
         if (editor.document.isEmpty) {
             if (reject) reject("empty file");
             return;
@@ -135,6 +139,8 @@ class IssueProvider {
                     console.log("Nothing to fix");
                 }
             });
+            
+            if (resolve) resolve(result);
         });
 
         console.info(`Running ${process.command} ${process.args.join(" ")}`);

@@ -2,6 +2,11 @@
 
 These versions follow [Semantic Versioning 2.0](https://semver.org).
 
+## 1.2.5 (2025-09-04)
+
+- Fix using `--select` and other flags in `check` command
+- Add 'Organize imports on file save' option
+
 ## 1.2.4 (2024-03-21)
 
 ### Fixed
