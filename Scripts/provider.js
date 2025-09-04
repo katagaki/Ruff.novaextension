@@ -49,6 +49,10 @@ class IssueProvider {
         return new Promise((resolve, reject) => this.fix(editor, null, "I", resolve, reject));
     }
 
+    removeUnusedImportsOnSave(editor) {
+        return new Promise((resolve, reject) => this.fix(editor, null, "F401", resolve, reject));
+    }
+
     check(editor, resolve = null, reject = null) {
         if (editor.document.isEmpty) {
             if (reject) reject("empty file");

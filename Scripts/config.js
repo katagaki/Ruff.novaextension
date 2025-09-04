@@ -20,6 +20,7 @@ const Config = {
     commandFormatArguments: () => get_config_value("commandFormatArguments"),
     formatOnSave: () => get_config_value("formatOnSave"),
     organizeOnSave: () => get_config_value("organizeOnSave"),
+    removeUnusedImportsOnSave: () => get_config_value("removeUnusedImportsOnSave")
 }
 
 module.exports = Config;

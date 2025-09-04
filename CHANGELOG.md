@@ -2,6 +2,10 @@
 
 These versions follow [Semantic Versioning 2.0](https://semver.org).
 
+## 1.2.6 (2025-09-04)
+
+- Add 'Remove unused imports on file save' option
+
 ## 1.2.5 (2025-09-04)
 
 - Fix using `--select` and other flags in `check` command

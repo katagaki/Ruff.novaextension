@@ -46,6 +46,9 @@ exports.activate = function () {
         if (Config.organizeOnSave()) {
             editor.onWillSave(issueProvider.organizeOnSave, issueProvider);
         }
+        if (Config.removeUnusedImportsOnSave() && !editor.document.uri.endsWith("__init__.py")) {
+            editor.onWillSave(issueProvider.removeUnusedImportsOnSave, issueProvider);
+        }
     });
 
     nova.commands.register("formatWithRuff", formatter.format, formatter);
