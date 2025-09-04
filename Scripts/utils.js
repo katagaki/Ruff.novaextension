@@ -7,25 +7,7 @@ function normalizeOptions(args) {
             .filter((option) => option !== "")
         : [];
 
-    let result = [];
-
-    for (const opt of options) {
-        let lastIdx = result.length - 1;
-        let lastResult = result[lastIdx];
-
-        if (
-            !opt.startsWith("-")
-            && lastResult
-            && lastResult.startsWith("-")
-            && lastResult.length > 1
-            && !lastResult.includes("=")
-        ) {
-            result[lastIdx] = lastResult + " " + opt;
-        }
-        else result.push(opt);
-    }
-
-    return result;
+    return options;
 }
 
 module.exports.normalizeOptions = normalizeOptions;
