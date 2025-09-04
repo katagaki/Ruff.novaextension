@@ -1,9 +1,9 @@
 {
     "identifier": "cc.aeron.nova-ruff",
     "name": "Ruff",
-    "organization": "Aeron",
+    "organization": "Justin Xin",
     "description": "Ruff, an extremely fast Python linter (and formatter), written in Rust, for Nova.",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "categories": [
         "issues",
         "commands",
