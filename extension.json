@@ -2,7 +2,7 @@
     "identifier": "com.katagaki.RuffForNova",
     "name": "Ruff",
     "organization": "Justin Xin",
-    "description": "Ruff, an extremely fast Python linter (and formatter), written in Rust, for Nova.",
+    "description": "Ruff, an extremely fast Python linter and formatter written in Rust. Based on the Ruff extension developed by Aeron.",
     "version": "1.2.5",
     "categories": [
         "issues",
