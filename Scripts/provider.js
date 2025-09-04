@@ -8,7 +8,7 @@ class IssueProvider {
     }
 
     getProcessOptions(fixable = null, select = null) {
-        const defaultOptions = ["--output-format=github", "--quiet", "-"];
+        const defaultOptions = ["--output-format", "github", "--quiet"];
         const commandArguments = this.config.commandArguments();
         const extraOptions = utils.normalizeOptions(commandArguments);
 

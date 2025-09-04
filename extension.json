@@ -1,5 +1,5 @@
 {
-    "identifier": "cc.aeron.nova-ruff",
+    "identifier": "com.katagaki.RuffForNova",
     "name": "Ruff",
     "organization": "Justin Xin",
     "description": "Ruff, an extremely fast Python linter (and formatter), written in Rust, for Nova.",
@@ -9,8 +9,8 @@
         "commands",
         "formatters"
     ],
-    "repository": "https://github.com/Aeron/Ruff.novaextension",
-    "bugs": "https://github.com/Aeron/Ruff.novaextension/issues",
+    "repository": "https://github.com/katagaki/Ruff.novaextension",
+    "bugs": "https://github.com/katagaki/Ruff.novaextension/issues",
     "license": "BSD-2-Clause-Patent",
     "main": "main.js",
     "activationEvents": [
@@ -87,21 +87,21 @@
     },
     "config": [
         {
-            "key": "cc.aeron.nova-ruff.executablePath",
+            "key": "com.katagaki.RuffForNova.executablePath",
             "title": "Executable Path",
             "description": "Path to the Ruff executable.",
             "type": "path",
             "default": "/usr/local/bin/ruff"
         },
         {
-            "key": "cc.aeron.nova-ruff.commandArguments",
+            "key": "com.katagaki.RuffForNova.commandArguments",
             "title": "Command (Check) Arguments",
             "description": "Additional arguments. The --output-format and --quiet options are always set.",
             "type": "string",
             "default": null
         },
         {
-            "key": "cc.aeron.nova-ruff.checkMode",
+            "key": "com.katagaki.RuffForNova.checkMode",
             "title": "Check Mode",
             "description": "An event on which to perform a check.",
             "type": "enum",
@@ -122,14 +122,14 @@
             "default": "onChange"
         },
         {
-            "key": "cc.aeron.nova-ruff.commandFormatArguments",
+            "key": "com.katagaki.RuffForNova.commandFormatArguments",
             "title": "Command (Format) Arguments",
             "description": "Additional arguments. The --quiet option is always set. The --stdin-filename is set conditionally.",
             "type": "string",
             "default": null
         },
         {
-            "key": "cc.aeron.nova-ruff.formatOnSave",
+            "key": "com.katagaki.RuffForNova.formatOnSave",
             "title": "Format on a file save",
             "type": "boolean",
             "default": true
@@ -137,20 +137,20 @@
     ],
     "configWorkspace": [
         {
-            "key": "cc.aeron.nova-ruff.executablePath",
+            "key": "com.katagaki.RuffForNova.executablePath",
             "title": "Executable Path",
             "description": "Path to the Ruff executable. Leave blank to use the extension default.",
             "type": "path",
             "placeholder": "/usr/local/bin/ruff"
         },
         {
-            "key": "cc.aeron.nova-ruff.commandArguments",
+            "key": "com.katagaki.RuffForNova.commandArguments",
             "title": "Command (Check) Arguments",
             "description": "Additional arguments. The --output-format and --quiet options are always set.",
             "type": "string"
         },
         {
-            "key": "cc.aeron.nova-ruff.checkMode",
+            "key": "com.katagaki.RuffForNova.checkMode",
             "title": "Check Mode",
             "description": "An event on which to perform a check.",
             "type": "enum",
@@ -170,14 +170,14 @@
             ]
         },
         {
-            "key": "cc.aeron.nova-ruff.commandFormatArguments",
+            "key": "com.katagaki.RuffForNova.commandFormatArguments",
             "title": "Command (Format) Arguments",
             "description": "Additional arguments. The --quiet option is always set. The --stdin-filename is set conditionally.",
             "type": "string",
             "default": null
         },
         {
-            "key": "cc.aeron.nova-ruff.formatOnSave",
+            "key": "com.katagaki.RuffForNova.formatOnSave",
             "title": "Format on a file save",
             "type": "enum",
             "values": [
